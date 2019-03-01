@@ -15,11 +15,11 @@ import java.net.URLEncoder;
 
 public class YandexTranslator {
     public static void main(String[] args) throws IOException {
-//        for (int i = 0; i < args.length; i++) {
-            String language = detectLanguage("123456");
-            if("ru".equals(language)) { System.out.println(translate("en", "123456"));}
-            else if("en".equals(language)) {System.out.println(translate("ru", "123456"));}
-//        }
+        for (int i = 0; i < args.length; i++) {
+            String language = detectLanguage(args[i]);
+            if("ru".equals(language)) { System.out.println(translate("en", args[i]));}
+            else if("en".equals(language)) {System.out.println(translate("ru", args[i]));}
+        }
     }
 
     public static String translate(String lang, String input) throws IOException {
