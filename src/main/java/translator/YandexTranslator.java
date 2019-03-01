@@ -1,5 +1,8 @@
 package translator;
 
+import com.google.gson.Gson;
+import data.Text;
+
 import javax.net.ssl.HttpsURLConnection;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -8,7 +11,6 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 public class YandexTranslator {
-    private static int i = 0;
     public static void main(String[] args) throws IOException {
         System.out.println(translate("ru", "привет"));
     }
@@ -24,13 +26,11 @@ public class YandexTranslator {
 
         InputStream response = connection.getInputStream();
         String json = new java.util.Scanner(response).nextLine();
-        int start = json.indexOf("[");
-        int end = json.indexOf("]");
-        String translated = json.substring(start + 2, end - 1);
-        i++;
-        if (translated.equals(input) && i < 2) {
+        Gson gson = new Gson();
+        Text translated = gson.fromJson(json, Text.class);
+        if (translated.text[0].equals(input)) {
             // if return equal of entered text - we need change direction of translation
             return translate("en", input);
-        } else return translated;
+        } else return translated.text[0];
     }
 }
