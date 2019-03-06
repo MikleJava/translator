@@ -1,6 +1,5 @@
 package translator;
 
-import com.cybozu.labs.langdetect.LangDetectException;
 import org.junit.Assert;
 
 import java.io.IOException;
