@@ -1,4 +1,9 @@
-# translator
-Try to work with yandex.translator API
+#Java8+#Gradle4+
 
-If you want to work with this project, you have to clone repository and make .jar file - where main class is translator.YandexTranslator. After just go to the path where .jar file was created and input command "java -jar nameOfYourJarFile.jar someText. For example, java -jar yandextranslator.jar hello. You can also input multiple words or even a statement in "", for example, java -jar yandextranslator.jar "my name is Mikle"
+1)Clone this repository and move to jar folder (yandextranslator/jar). There you can see yandextranslator.jar and profiles folder(for detecting language by langdetect library). Accessible languages are russian and english.
+2)Input command "java -jar yandextranslator.jar" and add some text, for example:
+      I)java -jar yandextranslator.jar hi
+      II)java -jar yandextranslator.jar hi "my name is Mikle"
+      III)java -jar yandextranslator.jar привет "i am from Moscow"
+      IV)java -jar yandextranslator.jar "как твои дела?" "я сегодня не приеду" "what is your name?"
+As you can see to correctly show translated statement you have to input text in "". If you want to translate just one word it is unnecessary to input "", but it is acceptable.
