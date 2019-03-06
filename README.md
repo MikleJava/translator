@@ -1,6 +1,6 @@
 #Java8+#Gradle4+
 
-1)Clone this repository and move to jar folder (yandextranslator/jar). There you can see yandextranslator.jar and profiles folder(for detecting language by langdetect library). Accessible languages are russian and english.
+1)Clone this repository and move to jar folder (translator/jar). There you can see yandextranslator.jar and profiles folder(for detecting language by langdetect library). Accessible languages are russian and english.
 
 2)Input command "java -jar yandextranslator.jar" and add some text, for example:
       
